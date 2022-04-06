@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Mascotas</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="registrar">Usuario nuevo</string>
 </resources>

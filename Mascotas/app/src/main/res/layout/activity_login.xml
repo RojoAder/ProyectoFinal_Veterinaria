@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:src="@drawable/logo_a_color"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/user"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/borde_redondo_transparente"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:fontFamily="@font/alata_regular"
+        android:textSize="19sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/contrasenia"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borde_redondo_transparente"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:fontFamily="@font/alata_regular"
+        android:textSize="19sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/iniciar"
+        android:background="@drawable/borde_redondo"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="60dp"
+        android:fontFamily="@font/alata_regular"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrar"
+        android:background="@drawable/borde_redondo_transparente"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="60dp"
+        android:fontFamily="@font/alata_regular"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:paddingVertical="0dp"/>
+
+
+
+</LinearLayout>
