@@ -4,4 +4,9 @@
     <string name="password">Contraseña</string>
     <string name="iniciar">Iniciar</string>
     <string name="registrar">Usuario nuevo</string>
+    <string name="tips_titulo">Foro y Tips</string>
+    <string name="habitos">Hábitos saludables</string>
+    <string name="patita">Dar la patita</string>
+    <string name="sentar">Sentarse</string>
+    <string name="pelota">Ir por la pelota</string>
 </resources>

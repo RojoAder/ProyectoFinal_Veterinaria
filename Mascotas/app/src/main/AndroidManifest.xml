@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mascotas">
         <activity
+            android:name=".entrenamiento_individual"
+            android:exported="false" />
+        <activity
+            android:name=".entrenamiento_menu"
+            android:exported="false" />
+        <activity
+            android:name=".foroMenu"
+            android:exported="false" />
+        <activity
             android:name=".menu"
             android:exported="false" />
         <activity

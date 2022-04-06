@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/ic_baseline_notes_24"
+        android:src="@drawable/ic_menu"
         android:layout_gravity="right"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"/>
@@ -51,7 +51,7 @@
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@color/red"
+            android:src="@color/black"
             android:layout_gravity="center"
             android:layout_marginLeft="80dp"/>
 
