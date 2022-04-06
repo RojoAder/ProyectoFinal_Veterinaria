@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mascotas">
         <activity
+            android:name=".registro_user"
+            android:exported="false"
+            android:label="@string/title_activity_registro_user"
+            android:theme="@style/Theme.Mascotas.NoActionBar" />
+        <activity
+            android:name=".mis_mascotas"
+            android:exported="false"
+            android:label="@string/title_activity_mis_mascotas"
+            android:theme="@style/Theme.Mascotas.NoActionBar" />
+        <activity
+            android:name=".registro"
+            android:exported="false"
+            android:label="@string/title_activity_registro"
+            android:theme="@style/Theme.Mascotas.NoActionBar" />
+        <activity
             android:name=".menu"
             android:exported="false" />
         <activity

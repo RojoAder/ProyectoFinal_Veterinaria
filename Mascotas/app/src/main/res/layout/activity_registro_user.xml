@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro_user">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Mascotas.AppBarOverlay"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="228dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/borde_redondo"
+        android:fontFamily="@font/alata_regular"
+        android:paddingHorizontal="60dp"
+        android:text="@string/title_activity_registro"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <EditText
+        android:id="@+id/mascota"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:autofillHints=""
+        android:background="@drawable/borde_redondo_transparente"
+        android:fontFamily="@font/alata_regular"
+        android:hint="Nombre (dueñ@)"
+        android:inputType="TODO"
+        android:minHeight="48dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="214dp" />
+
+    <EditText
+        android:id="@+id/raza"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:autofillHints=""
+        android:background="@drawable/borde_redondo_transparente"
+        android:fontFamily="@font/alata_regular"
+        android:hint="Usuario"
+        android:inputType="TODO"
+        android:minHeight="48dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <EditText
+        android:id="@+id/raza"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:autofillHints=""
+        android:background="@drawable/borde_redondo_transparente"
+        android:fontFamily="@font/alata_regular"
+        android:hint="Contraseña"
+        android:inputType="TODO"
+        android:minHeight="48dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="471dp" />
+
+    <EditText
+        android:id="@+id/edad"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="48dp"
+        android:autofillHints=""
+        android:background="@drawable/borde_redondo_transparente"
+        android:fontFamily="@font/alata_regular"
+        android:hint="Correo Electronico"
+        android:inputType="TODO"
+        android:minHeight="48dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edad"
+        app:layout_constraintTop_toBottomOf="@+id/mascota"
+        tools:layout_editor_absoluteX="73dp" />
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="189dp"
+        android:layout_height="41dp"
+        android:background="@drawable/borde_redondo_transparente"
+        android:fontFamily="@font/alata_regular"
+        android:paddingHorizontal="60dp"
+        android:paddingVertical="0dp"
+        android:text="Siguiente"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edad"
+        app:layout_constraintVertical_bias="0.655" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
