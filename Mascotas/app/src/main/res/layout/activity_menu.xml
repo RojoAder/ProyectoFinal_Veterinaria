@@ -30,7 +30,7 @@
                 android:id="@+id/imagen1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/logo_a_color"
+                android:src="@drawable/calendario"
                 />
 
             <TextView
@@ -58,14 +58,14 @@
                 android:id="@+id/imagen2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/logo_a_color"
+                android:src="@drawable/foro"
                 />
 
             <TextView
                 android:id="@+id/texto2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calendario"
+                android:text="Foro"
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -93,14 +93,14 @@
                 android:id="@+id/imagen3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/logo_a_color"
+                android:src="@drawable/entrenamiento"
                 />
 
             <TextView
                 android:id="@+id/texto3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calendario"
+                android:text="Entrenamiento"
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -121,14 +121,14 @@
                 android:id="@+id/imagen4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/logo_a_color"
+                android:src="@drawable/articulos"
                 />
 
             <TextView
                 android:id="@+id/texto4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calendario"
+                android:text="Compras"
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -156,14 +156,14 @@
             android:id="@+id/imagen5"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/logo_a_color"
+            android:src="@drawable/anadir_mascota"
             />
 
         <TextView
             android:id="@+id/texto5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calendario"
+            android:text="Mis Mascotas"
             android:paddingVertical="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -185,14 +185,14 @@
                 android:id="@+id/imagen6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/logo_a_color"
+                android:src="@drawable/emergencia"
                 />
 
             <TextView
                 android:id="@+id/texto6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calendario"
+                android:text="Emergencias"
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
