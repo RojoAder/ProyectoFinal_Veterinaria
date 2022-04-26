@@ -41,6 +41,6 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/borde_redondo_gris"/>
 
-    
+
 
 </LinearLayout>

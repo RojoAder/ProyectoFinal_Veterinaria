@@ -10,6 +10,11 @@
     <string name="age">Edad</string>
     <string name="raza">Raza</string>
     <string name="my_pets">Mis Mascotas</string>
+    <string name="habitos">Hábitos Saludables</string>
+    <string name="tips_titulo">Foro y Tips</string>
+    <string name="patita">Dar la patita</string>
+    <string name="sentar">Sentarse</string>
+    <string name="pelota">Ir por la pelota</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

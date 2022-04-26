@@ -20,19 +20,61 @@
         android:layout_height="220dp"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@color/red"
-            android:layout_gravity="center"
-            android:layout_marginLeft="80dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="70dp"
+            >
+            <ImageView
+                android:id="@+id/imagen1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_a_color"
+                />
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@color/red"
-            android:layout_gravity="center"
-            android:layout_marginLeft="80dp"/>
+            <TextView
+                android:id="@+id/texto1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendario"
+                android:paddingVertical="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@+id/imagen1"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/alata_regular"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            >
+            <ImageView
+                android:id="@+id/imagen2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_a_color"
+                />
+
+            <TextView
+                android:id="@+id/texto2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendario"
+                android:paddingVertical="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@+id/imagen2"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/alata_regular"
+                />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -41,19 +83,61 @@
         android:layout_height="220dp"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@color/red"
-            android:layout_gravity="center"
-            android:layout_marginLeft="80dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="70dp"
+            >
+            <ImageView
+                android:id="@+id/imagen3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_a_color"
+                />
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@color/black"
-            android:layout_gravity="center"
-            android:layout_marginLeft="80dp"/>
+            <TextView
+                android:id="@+id/texto3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendario"
+                android:paddingVertical="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@+id/imagen3"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/alata_regular"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            >
+            <ImageView
+                android:id="@+id/imagen4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_a_color"
+                />
+
+            <TextView
+                android:id="@+id/texto4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendario"
+                android:paddingVertical="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@+id/imagen4"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/alata_regular"
+                />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -62,21 +146,62 @@
         android:layout_height="220dp"
         android:orientation="horizontal">
 
-        <ImageButton
+        <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="70dp"
+        >
+        <ImageView
+            android:id="@+id/imagen5"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@color/red"
-            android:layout_gravity="center"
-            android:layout_marginLeft="80dp"/>
+            android:src="@drawable/logo_a_color"
+            />
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@color/red"
-            android:layout_gravity="center"
-            android:layout_marginLeft="80dp"/>
+        <TextView
+            android:id="@+id/texto5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calendario"
+            android:paddingVertical="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@+id/imagen5"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/alata_regular"
+            />
 
-    </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            >
+            <ImageView
+                android:id="@+id/imagen6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_a_color"
+                />
+
+            <TextView
+                android:id="@+id/texto6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendario"
+                android:paddingVertical="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@+id/imagen6"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/alata_regular"
+                />
+
+        </RelativeLayout>
 
 
 
