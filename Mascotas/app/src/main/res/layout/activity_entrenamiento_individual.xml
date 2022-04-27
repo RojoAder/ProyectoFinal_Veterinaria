@@ -33,14 +33,145 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:src="@mipmap/ic_placeholder"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/borde_redondo_gris"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@mipmap/ic_placeholder"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/borde_redondo_gris"
+            android:layout_marginLeft="40dp"
+            />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="5dp"
+
+
+
+    </LinearLayout>
+
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/borde_top_redondo_rojo"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:lines="6"
+                android:text="Instrucciones"
+                android:fontFamily="@font/alata_regular"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="1dp"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/borde_cuadrado_rojo"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:lines="6"
+                android:text=""
+                android:fontFamily="@font/alata_regular"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="1dp"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/borde_cuadrado_rojo"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:lines="6"
+                android:text=""
+                android:fontFamily="@font/alata_regular"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="1dp"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/borde_cuadrado_rojo"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:lines="6"
+                android:text=""
+                android:fontFamily="@font/alata_regular"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="1dp"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/borde_bottom_redondo_rojo"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:lines="6"
+                android:text=""
+                android:fontFamily="@font/alata_regular"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="1dp"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+        </TableRow>
+
+    </TableLayout>
 
 
 </LinearLayout>
