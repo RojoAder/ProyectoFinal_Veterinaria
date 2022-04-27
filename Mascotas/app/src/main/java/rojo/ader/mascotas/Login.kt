@@ -15,8 +15,9 @@ class Login : AppCompatActivity() {
             val intent = Intent(this, menu::class.java)
             startActivity(intent)
         }
+
         var button2:Button = findViewById(R.id.registrar)
-        button.setOnClickListener {
+        button2.setOnClickListener {
             val intent = Intent(this, registro_user::class.java)
             startActivity(intent)
         }

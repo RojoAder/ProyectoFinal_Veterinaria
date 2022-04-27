@@ -26,6 +26,12 @@ class mis_mascotas : AppCompatActivity() {
             val intent = Intent(this, menu::class.java)
             startActivity(intent)
         }
+
+        var button2:ImageView = findViewById(R.id.btnAgregar)
+        button2.setOnClickListener {
+            val intent = Intent(this, registro::class.java)
+            startActivity(intent)
+        }
     }
 
 

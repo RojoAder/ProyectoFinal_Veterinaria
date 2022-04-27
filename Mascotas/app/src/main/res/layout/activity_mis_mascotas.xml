@@ -161,6 +161,7 @@
     </LinearLayout>
     
     <ImageView
+        android:id="@+id/btnAgregar"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_baseline_add_circle_outline_24"
