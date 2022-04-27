@@ -8,4 +8,10 @@ class entrenamiento_menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_entrenamiento_menu)
     }
+
+    var button:Button = findViewById(R.id.backEntrenamiento)
+    button.setOnClickListener {
+        val intent = Intent(this@MainActivity, menu::class.java)
+        startActivity(intent)
+    }
 }

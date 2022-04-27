@@ -37,4 +37,10 @@ class mis_mascotas : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+
+    var button:Button = findViewById(R.id.btnBack)
+    button.setOnClickListener {
+        val intent = Intent(this@MainActivity, menu::class.java)
+        startActivity(intent)
+    }
 }

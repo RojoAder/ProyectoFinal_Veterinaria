@@ -28,12 +28,12 @@
             >
 
             <ImageView
-                android:id="@+id/imagen1"
+                android:id="@+id/btnCalendario"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/calendario"
+                android:background="@drawable/logo_boton"
                 android:padding="20dp"
-                android:background="@drawable/logo_boton"/>
+                android:src="@drawable/calendario" />
 
             <TextView
                 android:id="@+id/texto1"
@@ -43,7 +43,7 @@
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_below="@+id/imagen1"
+                android:layout_below="@+id/btnCalendario"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/alata_regular"
                 />
@@ -56,14 +56,14 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="50dp"
             >
+
             <ImageView
-                android:id="@+id/imagen2"
+                android:id="@+id/btnForo"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/foro"
-                android:padding="20dp"
                 android:background="@drawable/logo_boton"
-                />
+                android:padding="20dp"
+                android:src="@drawable/foro" />
 
             <TextView
                 android:id="@+id/texto2"
@@ -73,7 +73,7 @@
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_below="@+id/imagen2"
+                android:layout_below="@+id/btnForo"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/alata_regular"
                 />
@@ -93,14 +93,14 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="70dp"
             >
+
             <ImageView
-                android:id="@+id/imagen3"
+                android:id="@+id/btnEntrenamiento"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/entrenamiento"
-                android:padding="20dp"
                 android:background="@drawable/logo_boton"
-                />
+                android:padding="20dp"
+                android:src="@drawable/entrenamiento" />
 
             <TextView
                 android:id="@+id/texto3"
@@ -110,7 +110,7 @@
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_below="@+id/imagen3"
+                android:layout_below="@+id/btnEntrenamiento"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/alata_regular"
                 />
@@ -123,14 +123,14 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="50dp"
             >
+
             <ImageView
-                android:id="@+id/imagen4"
+                android:id="@+id/btnCompras"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/articulos"
-                android:padding="20dp"
                 android:background="@drawable/logo_boton"
-                />
+                android:padding="20dp"
+                android:src="@drawable/articulos" />
 
             <TextView
                 android:id="@+id/texto4"
@@ -140,7 +140,7 @@
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_below="@+id/imagen4"
+                android:layout_below="@+id/btnCompras"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/alata_regular"
                 />
@@ -160,14 +160,14 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="70dp"
         >
-        <ImageView
-            android:id="@+id/imagen5"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/anadir_mascota"
-            android:padding="20dp"
-            android:background="@drawable/logo_boton"
-            />
+
+            <ImageView
+                android:id="@+id/btnMisMascotas"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/logo_boton"
+                android:padding="20dp"
+                android:src="@drawable/anadir_mascota" />
 
         <TextView
             android:id="@+id/texto5"
@@ -177,7 +177,7 @@
             android:paddingVertical="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_below="@+id/imagen5"
+            android:layout_below="@+id/btnMisMascotas"
             android:layout_centerInParent="true"
             android:fontFamily="@font/alata_regular"
             />
@@ -191,14 +191,14 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="50dp"
             >
+
             <ImageView
-                android:id="@+id/imagen6"
+                android:id="@+id/btnEmergencias"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/emergencia"
-                android:padding="20dp"
                 android:background="@drawable/logo_boton"
-                />
+                android:padding="20dp"
+                android:src="@drawable/emergencia" />
 
             <TextView
                 android:id="@+id/texto6"
@@ -208,7 +208,7 @@
                 android:paddingVertical="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_below="@+id/imagen6"
+                android:layout_below="@+id/btnEmergencias"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/alata_regular"
                 />

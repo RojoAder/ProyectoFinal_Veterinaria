@@ -37,4 +37,11 @@ class registro_user : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+
+    var button:Button = findViewById(R.id.registrar)
+    button.setOnClickListener {
+        val intent = Intent(this@MainActivity, registro::class.java)
+        startActivity(intent)
+    }
+
 }

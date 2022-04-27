@@ -8,4 +8,10 @@ class foroMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foro_menu)
     }
+
+    var button:Button = findViewById(R.id.btnBack)
+    button.setOnClickListener {
+        val intent = Intent(this@MainActivity, menu::class.java)
+        startActivity(intent)
+    }
 }

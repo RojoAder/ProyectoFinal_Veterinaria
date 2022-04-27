@@ -13,10 +13,11 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/backEntrenamiento"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_action_name"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_action_name" />
 
         <TextView
             android:layout_width="wrap_content"
