@@ -15,7 +15,7 @@
     <string name="patita">Dar la patita</string>
     <string name="sentar">Sentarse</string>
     <string name="pelota">Ir por la pelota</string>
-    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae euismod lectus. Fusce cursus in est nec pellentesque. Maecenas sit amet dui quis nulla consectetur cursus at ac nisl. Duis hendrerit vulputate augue, eget scelerisque metus mattis id. Morbi a ipsum ut ante pretium accumsan. Nunc ex mauris, ultricies ac pulvinar sit amet, consequat vitae risus. Integer laoreet scelerisque nunc, sit amet aliquet eros venenatis non. Donec vel dapibus arcu.</string>
+    <string name="tips">¿Qué necesitas para ser el mejor dueño?</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -23,7 +23,7 @@
     <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_second_fragment">Hello second fragment.</string>
     <string name="registro">Registro</string>
     <string name="title_activity_mis_mascotas">mis_mascotas</string>
     <string name="title_activity_registro_user">registro_user</string>

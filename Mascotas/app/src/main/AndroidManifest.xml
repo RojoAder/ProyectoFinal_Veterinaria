@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mascotas">
         <activity
+            android:name=".tips"
+            android:exported="false" />
+        <activity
             android:name=".registro_user"
             android:exported="false"
             android:label="@string/title_activity_registro_user"

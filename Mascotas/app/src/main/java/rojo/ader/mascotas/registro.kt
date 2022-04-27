@@ -1,8 +1,10 @@
 package rojo.ader.mascotas
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.widget.Button
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -30,6 +32,12 @@ class registro : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        var button: Button = findViewById(R.id.registrar)
+        button.setOnClickListener {
+            val intent = Intent(this, menu::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -37,9 +45,5 @@ class registro : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
-    var button:Button = findViewById(R.id.registrar)
-    button.setOnClickListener {
-        val intent = Intent(this@MainActivity, menu::class.java)
-        startActivity(intent)
-    }
+
 }
