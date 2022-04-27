@@ -28,7 +28,7 @@ class mis_mascotas : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    
+
 
 
 }

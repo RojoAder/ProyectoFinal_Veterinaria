@@ -19,7 +19,7 @@ class menu : AppCompatActivity() {
 
         var button2:ImageView = findViewById(R.id.btnCalendario)
         button2.setOnClickListener {
-            val intent = Intent(this, foroMenu::class.java)
+            val intent = Intent(this, calendario::class.java)
             startActivity(intent)
         }
 
