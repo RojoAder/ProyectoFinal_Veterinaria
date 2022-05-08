@@ -74,7 +74,7 @@
         android:layout_marginTop="50dp"/>
 
     <EditText
-        android:id="@+id/edad"
+        android:id="@+id/email"
         android:layout_width="247dp"
         android:layout_height="44dp"
         android:layout_marginTop="50dp"

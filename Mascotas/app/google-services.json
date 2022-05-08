@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "185807077882",
+    "project_id": "cuidavet-bff85",
+    "storage_bucket": "cuidavet-bff85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185807077882:android:9b463e0ef807811152a443",
+        "android_client_info": {
+          "package_name": "rojo.ader.mascotas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185807077882-2d9odiec6sga6agu44vgaqcjjp53lmdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1O8ln-EYO-XKbIlf2V0vv7cJ96RaP6OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185807077882-2d9odiec6sga6agu44vgaqcjjp53lmdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
