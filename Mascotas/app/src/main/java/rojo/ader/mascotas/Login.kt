@@ -3,9 +3,12 @@ package rojo.ader.mascotas
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.style.ClickableSpan
 import android.util.Log
+import android.view.Menu
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -41,7 +44,7 @@ class Login : AppCompatActivity() {
                             //Log.d(TAG, "signInWithEmail:success")
                             val user = auth.currentUser
                             //updateUI(user)
-                            startActivity(Intent(this, MainActivity:: class.java))
+                            startActivity(Intent(this, menu:: class.java))
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("login", "signInWithEmail:failure", task.exception)
@@ -51,6 +54,13 @@ class Login : AppCompatActivity() {
                         }
                     }
             }
+
+        val recuperar:Button = findViewById(R.id.forgot)
+            recuperar.setOnClickListener {
+                val intent = Intent(this,Recuperar::class.java)
+                startActivity(intent)
+            }
+
         }
 
         var button2:Button = findViewById(R.id.registrar)

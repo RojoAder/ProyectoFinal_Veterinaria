@@ -34,7 +34,7 @@
         android:minHeight="48dp"
         android:paddingHorizontal="15dp"
         android:paddingVertical="5dp"
-        android:textSize="19sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"/>
@@ -51,7 +51,7 @@
         android:minHeight="48dp"
         android:paddingHorizontal="15dp"
         android:paddingVertical="5dp"
-        android:textSize="19sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"/>
@@ -64,11 +64,11 @@
         android:background="@drawable/borde_redondo_transparente"
         android:fontFamily="@font/alata_regular"
         android:hint="Contraseña"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingHorizontal="15dp"
         android:paddingVertical="5dp"
-        android:textSize="19sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"/>
@@ -86,7 +86,7 @@
         android:minHeight="48dp"
         android:paddingHorizontal="15dp"
         android:paddingVertical="5dp"
-        android:textSize="19sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center"/>
 
