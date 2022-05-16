@@ -9,7 +9,7 @@
     <string name="pet_name">Nombre de la mascota</string>
     <string name="age">Edad</string>
     <string name="raza">Raza</string>
-    <string name="my_pets">Mis Mascotas</string>
+
     <string name="habitos">Hábitos Saludables</string>
     <string name="tips_titulo">Foro y Tips</string>
     <string name="patita">Dar la patita</string>
@@ -19,6 +19,12 @@
     <string name="olvidaste">¿Olvidaste tu contraseña?</string>
     <string name="correo">Correo Electrónico</string>
     <string name="recuperar">Recuperar Contraseña</string>
+
+    <string name="calendario">Calendario</string>
+    <string name="my_pets">Mis Mascotas</string>
+    <string name="entrenamiento">Entrenamiento</string>
+    <string name="articulos">Articulos</string>
+    <string name="emergencias">Emergencias</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

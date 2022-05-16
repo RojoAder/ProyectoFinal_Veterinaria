@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/calendario"
+        android:checked="true"
+        android:icon="@drawable/calendario"
+        android:title="@string/calendario" />
+    <item
+        android:id="@+id/foro"
+        android:icon="@drawable/foro"
+        android:title="@string/tips_titulo" />
+    <item
+        android:id="@+id/entrenamiento"
+        android:icon="@drawable/entrenamiento"
+        android:title="@string/entrenamiento" />
+    <item
+        android:id="@+id/articulos"
+        android:icon="@drawable/articulos"
+        android:title="@string/articulos" />
+    <item
+        android:id="@+id/misMascotas"
+        android:icon="@drawable/anadir_mascota"
+        android:title="@string/my_pets" />
+        <item
+            android:id="@+id/emergencias"
+            android:icon="@drawable/emergencia"
+            android:title="@string/emergencias" />
+    </group>
+</menu>

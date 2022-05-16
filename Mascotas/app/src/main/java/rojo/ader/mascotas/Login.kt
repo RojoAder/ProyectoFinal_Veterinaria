@@ -55,9 +55,9 @@ class Login : AppCompatActivity() {
                     }
             }
 
-        val recuperar:Button = findViewById(R.id.forgot)
-            recuperar.setOnClickListener {
-                val intent = Intent(this,Recuperar::class.java)
+        val button3:Button = findViewById(R.id.forgot)
+            button3.setOnClickListener {
+                val intent = Intent(this, Recuperar::class.java)
                 startActivity(intent)
             }
 

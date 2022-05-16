@@ -47,6 +47,8 @@
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.10869565217391304" />
         <entry key="app/src/main/res/layout/fragment_second2.xml" value="0.10869565217391304" />
         <entry key="app/src/main/res/layout/fragment_second3.xml" value="0.10869565217391304" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/drawer_view.xml" value="0.35625" />
       </map>
     </option>
   </component>

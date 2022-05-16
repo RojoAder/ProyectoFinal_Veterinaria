@@ -12,7 +12,7 @@
         android:layout_height="260dp"
         android:src="@drawable/logo_a_color"
         android:layout_gravity="center"
-        android:layout_marginTop="120dp"/>
+        android:layout_marginTop="80dp"/>
 
     <EditText
         android:id="@+id/usuario"
@@ -74,14 +74,14 @@
     <Button
         android:id="@+id/forgot"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:text="@string/olvidaste"
         android:textColor="@color/red"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/alata_regular"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 
 

@@ -24,6 +24,7 @@
         android:textSize="25sp"/>
 
     <ImageView
+        android:id="@+id/imagenPerfil"
         android:layout_width="221dp"
         android:layout_height="214dp"
         android:layout_gravity="center"
