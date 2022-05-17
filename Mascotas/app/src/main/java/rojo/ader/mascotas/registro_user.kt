@@ -32,7 +32,7 @@ class registro_user : AppCompatActivity() {
 
         var button: Button = findViewById(R.id.registrar)
         button.setOnClickListener {
-        val usuario:Usuario = Usuario(this)
+        val usuario = Usuario(this)
             usuario.registar()
             }
         }

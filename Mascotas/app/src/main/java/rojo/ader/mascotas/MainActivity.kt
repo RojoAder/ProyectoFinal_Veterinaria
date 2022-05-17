@@ -17,11 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize Firebase Auth
-        auth = Firebase.auth
-
-        val usuario = auth.currentUser
-
         var button: Button = findViewById(R.id.btnInicio)
         button.setOnClickListener {
             val intent = Intent(this, Login::class.java)
