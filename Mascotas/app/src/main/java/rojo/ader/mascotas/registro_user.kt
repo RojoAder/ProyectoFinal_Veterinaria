@@ -30,42 +30,11 @@ class registro_user : AppCompatActivity() {
         binding = ActivityRegistroUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val et_usuario : EditText = findViewById(R.id.email)
-        val et_contra : EditText = findViewById(R.id.contrasenia)
-
-
         var button: Button = findViewById(R.id.registrar)
         button.setOnClickListener {
-        //iniciar sesion
-        var usuario : String = et_usuario.text.toString().trim()
-        var contra: String = et_contra.text.toString().trim()
-
-        //empty fields
-        if (usuario.isNullOrEmpty() || contra.isNullOrEmpty()){
-            Toast.makeText(this, "Todos los campos necesitan estar llenos para continuar", Toast.LENGTH_SHORT).show()
-        }else{
-            auth.createUserWithEmailAndPassword(usuario, contra)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
-                        //Log.d(TAG, "createUserWithEmail:success")
-                        val user = auth.currentUser
-                        //updateUI(user)
-                        startActivity(Intent(this, MainActivity:: class.java))
-                    } else {
-                        // If sign in fails, display a message to the user.
-                        Log.w("registro", "createUserWithEmail:failure", task.exception)
-                        Toast.makeText(baseContext, "Authentication failed.",
-                            Toast.LENGTH_SHORT).show()
-                        //updateUI(null)
-                    }
-                }
+        val usuario:Usuario = Usuario(this)
+            usuario.registar()
+            }
         }
-        }
-
 
     }
-
-
-
-}
