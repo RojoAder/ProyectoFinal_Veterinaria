@@ -1,11 +1,15 @@
 package rojo.ader.mascotas
 
 import android.Manifest
+import android.app.Activity
+import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -15,11 +19,18 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import rojo.ader.mascotas.databinding.ActivityRegistroBinding
 import java.lang.Exception
 
 
 class registro : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
+    val database = Firebase.database
+    val myRef = database.getReference("mascotas")
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityRegistroBinding
@@ -30,11 +41,13 @@ class registro : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        auth = Firebase.auth
 
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         imagenPerfil = findViewById(R.id.imagenPerfil)
+
 
 
         imagenPerfil.setOnClickListener {
@@ -49,7 +62,21 @@ class registro : AppCompatActivity() {
 
         var button: Button = findViewById(R.id.registrar)
         button.setOnClickListener {
-            val intent = Intent(this, menu::class.java)
+            val mascota:EditText = findViewById(R.id.mascota)
+            val raza:EditText = findViewById(R.id.raza)
+            val edad:EditText = findViewById(R.id.edad)
+
+            val mascotaS: String = mascota.text.toString().trim()
+            val razaS: String = raza.text.toString().trim()
+            val edadS: String = edad.text.toString().trim()
+            Log.d(ContentValues.TAG,mascotaS)
+            val user = auth.currentUser
+
+            myRef.child(mascotaS).child("usuario").setValue(user?.uid.toString())
+            myRef.child(mascotaS).child("raza").setValue(razaS)
+            myRef.child(mascotaS).child("edad").setValue(edadS)
+            myRef.child(mascotaS).child("nombre").setValue(mascotaS)
+            val intent = Intent(this, mis_mascotas::class.java)
             startActivity(intent)
         }
     }

@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
+import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -28,8 +29,10 @@ import rojo.ader.mascotas.databinding.ActivityMisMascotasBinding
 
 class mis_mascotas : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     val database = Firebase.database
+    var mascotas: ArrayList<Mascota> = ArrayList()
     private lateinit var auth: FirebaseAuth
     val myRef = database.getReference("usuarios")
+    val myRef2 = database.getReference("mascotas")
     private lateinit var drawer: DrawerLayout
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -54,24 +57,66 @@ class mis_mascotas : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val correoUsuario: TextView = headerView.findViewById(R.id.email)
 
         myRef.addValueEventListener(object: ValueEventListener {
-
             override fun onDataChange(snapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 val value = snapshot.getValue<Map<String,Map<String,String>>>()
                 val map: Map<String, String>? = value?.get(user?.uid.toString())
-
                 nombreUsuario.setText(map?.get("duenio").toString())
                 correoUsuario.setText(map?.get("correo").toString())
                 Log.d(ContentValues.TAG, map.toString())
                 Log.d(ContentValues.TAG, "Value is: " + value)
             }
-
             override fun onCancelled(error: DatabaseError) {
                 Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
             }
-
         })
+
+        myRef2.addValueEventListener(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                //This method is called once with the initial value and again
+                //whenever data at this location is updated.
+                val value = snapshot.getValue<Map<String, Map<String, String>>>()
+                val keys: Set<String>? = value?.keys
+
+                var mascotasArray = ArrayList<Map<String, String>?>()
+                var mascotasUsuario = ArrayList<Map<String, String>?>()
+
+                if (keys != null) {
+                    for (item in keys) {
+                        mascotasArray.add(value[item])
+                        if (mascotasArray[0]?.get("usuario").equals(user?.uid.toString())) {
+                            mascotasUsuario.add((value[item]))
+                            mascotasArray.clear()
+                        }
+                        mascotasArray.clear()
+                    }
+                }
+
+
+                for (item in mascotasUsuario) {
+                    var nombreM: String = item?.get("nombre").toString()
+                    Log.d(ContentValues.TAG, nombreM.toString())
+
+                    var edadM: String = item?.get("edad").toString()
+                    var razaM: String = item?.get("raza").toString()
+                    mascotas.add(Mascota(nombreM,edadM,razaM))
+                }
+
+
+
+                Log.d(ContentValues.TAG, mascotasUsuario.toString())
+                Log.d(ContentValues.TAG, "Value is: " + value)
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
+            }
+        })
+
+        Log.d(ContentValues.TAG,mascotas[0].toString())
+        var listView: ListView = findViewById(R.id.list_View)
+        var adaptador = adaptadorMascotas(this,mascotas)
+        listView.adapter = adaptador
 
         var button:ImageView = findViewById(R.id.btnBack)
         button.setOnClickListener {
