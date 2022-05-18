@@ -27,6 +27,7 @@ class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     val database = Firebase.database
     private lateinit var auth: FirebaseAuth
     val myRef = database.getReference("usuarios")
+    private lateinit var drawer:DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +35,7 @@ class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         auth = Firebase.auth
         val user = auth.currentUser
 
-        val drawer:DrawerLayout = findViewById(R.id.drawer_layout)
+        drawer = findViewById(R.id.drawer_layout)
         val menuButton:ImageView = findViewById(R.id.menuButton)
 
         val btnForo: ImageView  = findViewById(R.id.btnForo)
@@ -47,6 +48,7 @@ class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         val navigationView:NavigationView = findViewById(R.id.nav_view)
         val headerView: View = navigationView.getHeaderView(0)
         val drawerView: Menu = navigationView.menu
+        navigationView.setNavigationItemSelectedListener(this)
 
         val calendarioMenu = drawerView[0]
         val foroTipsMenu = drawerView[1]
@@ -133,6 +135,8 @@ class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.misMascotasMenu -> startActivity(Intent(this,mis_mascotas::class.java))
             R.id.emergenciasMenu -> startActivity(Intent(this,calendario::class.java))
         }
+        drawer.closeDrawer(GravityCompat.START)
+        return true
     }
 
 

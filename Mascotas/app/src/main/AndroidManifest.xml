@@ -12,11 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mascotas">
         <activity
-            android:name=".Menu2"
-            android:exported="false"
-            android:label="@string/title_activity_menu2"
-            android:theme="@style/Theme.Mascotas.NoActionBar" />
-        <activity
             android:name=".Recuperar"
             android:exported="false" />
         <activity
@@ -55,6 +50,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".foroMenu"
+            android:exported="false"
+            android:label="foroMenu"/>
+        <activity
+            android:name=".entrenamiento_menu"
+            android:exported="false"/>
+        <activity
+            android:name=".entrenamiento_individual"
+            android:exported="false"/>
+
     </application>
 
 </manifest>
