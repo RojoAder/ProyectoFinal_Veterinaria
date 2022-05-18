@@ -47,19 +47,7 @@ class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
         val navigationView:NavigationView = findViewById(R.id.nav_view)
         val headerView: View = navigationView.getHeaderView(0)
-        val drawerView: Menu = navigationView.menu
         navigationView.setNavigationItemSelectedListener(this)
-
-        val calendarioMenu = drawerView[0]
-        val foroTipsMenu = drawerView[1]
-        val entrenamientoMenu = drawerView[2]
-        val articulosMenu = drawerView[3]
-        val misMascotasMenu = drawerView[4]
-        val emergenciasMenu = drawerView[5]
-
-
-
-
 
         val nombreUsuario:TextView = headerView.findViewById(R.id.nombre)
         val correoUsuario:TextView = headerView.findViewById(R.id.email)
