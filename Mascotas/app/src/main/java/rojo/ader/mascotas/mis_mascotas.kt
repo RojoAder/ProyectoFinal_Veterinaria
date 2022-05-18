@@ -1,6 +1,7 @@
 package rojo.ader.mascotas
 
 import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -29,7 +30,7 @@ import rojo.ader.mascotas.databinding.ActivityMisMascotasBinding
 
 class mis_mascotas : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     val database = Firebase.database
-    var mascotas: ArrayList<Mascota> = ArrayList()
+    var mascotasL: ArrayList<Mascota> = ArrayList()
     private lateinit var auth: FirebaseAuth
     val myRef = database.getReference("usuarios")
     val myRef2 = database.getReference("mascotas")
@@ -71,7 +72,7 @@ class mis_mascotas : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
             }
         })
-
+        var context:Context = this
         myRef2.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //This method is called once with the initial value and again
@@ -84,7 +85,7 @@ class mis_mascotas : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 if (keys != null) {
                     for (item in keys) {
-                        mascotasArray.add(value[item])
+                        mascotasArray.add(value.get(item))
                         if (mascotasArray[0]?.get("usuario").equals(user?.uid.toString())) {
                             mascotasUsuario.add((value[item]))
                             mascotasArray.clear()
@@ -100,9 +101,13 @@ class mis_mascotas : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                     var edadM: String = item?.get("edad").toString()
                     var razaM: String = item?.get("raza").toString()
-                    mascotas.add(Mascota(nombreM,edadM,razaM))
+                    var mascota1: Mascota = Mascota(nombreM,edadM,razaM)
+                    mascotasL.add(mascota1)
                 }
 
+                var listView: ListView = findViewById(R.id.list_View)
+                var adaptador = adaptadorMascotas(context,mascotasL)
+                listView.adapter = adaptador
 
 
                 Log.d(ContentValues.TAG, mascotasUsuario.toString())
@@ -113,10 +118,8 @@ class mis_mascotas : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         })
 
-        Log.d(ContentValues.TAG,mascotas[0].toString())
-        var listView: ListView = findViewById(R.id.list_View)
-        var adaptador = adaptadorMascotas(this,mascotas)
-        listView.adapter = adaptador
+
+
 
         var button:ImageView = findViewById(R.id.btnBack)
         button.setOnClickListener {
