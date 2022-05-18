@@ -75,7 +75,8 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:paddingHorizontal="130dp"
-        android:paddingVertical="30dp"/>
+        android:paddingVertical="30dp"
+        android:id="@+id/tipsBtn"/>
 
     <Button
         android:layout_width="wrap_content"

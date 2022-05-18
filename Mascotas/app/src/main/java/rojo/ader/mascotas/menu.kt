@@ -2,6 +2,7 @@ package rojo.ader.mascotas
 
 import android.content.ContentValues.TAG
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -104,7 +105,8 @@ class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
 
         btnEmergencias.setOnClickListener {
-            val intent = Intent(this, mis_mascotas::class.java)
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.setData(Uri.parse("tel:911"))
             startActivity(intent)
         }
 
@@ -121,7 +123,7 @@ class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.entrenamientoMenu -> startActivity(Intent(this,entrenamiento_menu::class.java))
             R.id.articulosMenu -> startActivity(Intent(this,menu::class.java))
             R.id.misMascotasMenu -> startActivity(Intent(this,mis_mascotas::class.java))
-            R.id.emergenciasMenu -> startActivity(Intent(this,calendario::class.java))
+            R.id.emergenciasMenu -> startActivity(Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel:911")))
         }
         drawer.closeDrawer(GravityCompat.START)
         return true

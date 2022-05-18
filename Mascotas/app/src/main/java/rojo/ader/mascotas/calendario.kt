@@ -1,6 +1,7 @@
 package rojo.ader.mascotas
 
 import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ListView
 import android.widget.TextView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -26,6 +28,8 @@ class calendario : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
     val database = Firebase.database
     private lateinit var auth: FirebaseAuth
     val myRef = database.getReference("usuarios")
+    val myRef2 = database.getReference("citas")
+    var citasL :ArrayList<Cita> = ArrayList()
     private lateinit var drawer: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,6 +68,52 @@ class calendario : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
 
         })
 
+        var context: Context = this
+
+        myRef2.addValueEventListener(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                //This method is called once with the initial value and again
+                //whenever data at this location is updated.
+                val value = snapshot.getValue<Map<String, Map<String, String>>>()
+                val keys: Set<String>? = value?.keys
+
+                var citasArray = ArrayList<Map<String, String>?>()
+                var citasUsuario = ArrayList<Map<String, String>?>()
+
+                if (keys != null) {
+                    for (item in keys) {
+                        citasArray.add(value.get(item))
+                        if (citasArray[0]?.get("usuario").equals(user?.uid.toString())) {
+                            citasUsuario.add((value[item]))
+                            citasArray.clear()
+                        }
+                        citasArray.clear()
+                    }
+                }
+
+
+                for (item in citasUsuario) {
+                    var nombreEvento: String = item?.get("nombreEvento").toString()
+                    Log.d(ContentValues.TAG, nombreEvento.toString())
+
+                    var fechaS: String = item?.get("fecha").toString()
+                    var cita1: Cita = Cita(fechaS,nombreEvento)
+                    citasL.add(cita1)
+                }
+
+                var listView: ListView = findViewById(R.id.list_View)
+                var adaptador = adaptadorCitas(context,citasL)
+                listView.adapter = adaptador
+
+
+                Log.d(ContentValues.TAG, citasUsuario.toString())
+                Log.d(ContentValues.TAG, "Value is: " + value)
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
+            }
+        })
+
         var button: ImageView = findViewById(R.id.backCalendario)
         button.setOnClickListener {
             val intent = Intent(this, menu::class.java)
@@ -71,6 +121,11 @@ class calendario : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         }
         menuButton.setOnClickListener {
             drawer.openDrawer(GravityCompat.START)
+        }
+
+        val add:ImageView = findViewById(R.id.btnAgregar)
+        add.setOnClickListener {
+            startActivity(Intent(this,citasPicker::class.java))
         }
 
     }
